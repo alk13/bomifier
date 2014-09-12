@@ -1,6 +1,6 @@
 {
     "name": "alk13/bomifier",
-    "type": "tool",
+    "type": "library",
     "description": "Bomifier",
     "homepage": "http://al.k13.fr/bomifier",
     "keywords": ["bom"],
