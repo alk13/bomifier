@@ -1,9 +1,5 @@
 <?php
 
-namespace Bomifier;
-
-use Exception;
-
 /**
  * Bomifier class.
  * @author _alK13
