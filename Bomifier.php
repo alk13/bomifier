@@ -17,7 +17,7 @@ class Bomifier
      * The uri is null to assume backward compatibility.
      * @param string $uri
      */
-    protected function __construct($uri = null)
+    public function __construct($uri = null)
     {
         $this->setUri($uri);
     }
@@ -100,14 +100,15 @@ class Bomifier
     }
 
     /**
-     * Set the URI file.
-     * @param string $uri
+     * Set the URI File
+     * @param $uri
+     * @return $this
      * @throws Exception
      */
     public function setUri($uri)
     {
-        if (!is_file($uri)) {
-            throw new Exception(sprint('File %s not found.', $uri));
+        if (!empty($uri) && !is_file($uri)) {
+            throw new \Exception(sprintf('File %s not found.', $uri));
         }
         $this->uri = $uri;
         return $this;
